@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1200px;
+    padding:auto;
+    margin: 0 auto;
+}
+button{
+    appearance: none;
+    border : 1px solid #000;
+}
+body{
+    color: #333;
+    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.42857143;
+    font-size: 1.4rem;
+}
+a{
+    text-decoration: none;
+    color : #fff;
+}
+ul{
+    list-style: none;
+}
+.main-container{
+    background : url("images/bg-image.webp");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.qualities-links a{
+    font-size:12px;
+}
+.nav-qualities{
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+.rows ul li {
+    margin-bottom: 10px;
+}
+.info-rows{
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(1, 20%);
+}
+footer.main-footer {
+    background-color: #000;
+    color: #fff;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+footer .container {
+    padding-top: 40px;
+}
+.copyright-text {
+    display: flex;
+    justify-content: space-between;
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(1, 100%);
+    justify-items: center;
+}
+.heading{
+    margin: 10px 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.sale-links{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.sale-links button{
+    border-radius: 10px;
+    margin: 15px 10px;
+    padding: 10px 30px;
+    font-family: ArcaMajora3-Heavy;
+    line-height: normal;
+    white-space: nowrap;
+    background: #282828;
+    color: #fff ;
+}
+.active{
+    color :#282828 !important;
+    background-color:#fff !important;
+}
+.sale-products{
+    display:flex;
+    flex-direction:row;
+
+}
+.product{
+    display:inline-block;
+    background: #f2f2f2;
+    margin: 0 5px;
+    max-width: 100%;
+    position: relative;
+}
+.product-image{
+   
+    padding-bottom: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-image img{
+    width: 100%;
+        object-fit: cover;
+        object-position: top;
+        position:relative;
+}
+.product-details{
+    position: relative;
+    margin: 5px 0;
+    padding: 10px 10px 20px;
+    text-align: left !important;
+    display: flex;
+    flex-direction : column;
+    justify-content: space-between;
+}
+.product-details a{
+    font-size: 12px;
+    line-height: 12px;
+    color: #282828 !important;
+    text-decoration: none !important;
+}
+.special-price{
+    font-family: 'montserrat';
+    color: #333;
+    font-size:14px;
+}
+.was-price{
+    font-size: 11px;
+    color: #fc7070;
+    text-decoration:line-through;
+}
+.save-price{
+    color: #fc7070;
+    font-weight: 800 !important;
+    font-size:14px;
+}
+header{
+    height:30vh;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 100%) 0%, rgba(0, 0, 0, 0%) 100%);
+}
