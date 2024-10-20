@@ -1,0 +1,55 @@
+.bg-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+  
+  .western-wear {
+    background-image: url("images/women_western.webp");
+    height: 560px;
+  }
+  
+  .women-rtw {
+    background-image: url("images/women_rtw.webp");
+    height: 560px;
+  }
+  
+  .home {
+    background-image: url("images/everything_home.webp");
+    height: 500px;
+  }
+  
+  .flex-content h5 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  .flex-content p {
+    font-size: 25px;
+    font-weight: 600;
+    border-bottom: 1px solid;
+  }
+  
+  .section-heading h2 {
+    font-size: 50px;
+    font-weight: 600;
+  }
+  
+  .blog-date {
+    bottom: 10px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .blog-title a, .blog-desc {
+    font-size: 1rem;
+  }
+  
+  .qualities .text-center {
+    text-align: center;
+  }
+  
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
