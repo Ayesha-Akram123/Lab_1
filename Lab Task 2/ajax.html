@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Posts</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center"> Create Posts</h2>
+
+    <!-- Create Form -->
+    <form id="createForm">
+        <div class="form-group">
+            <label for="createTitle">Title:</label>
+            <input type="text" class="form-control" id="createTitle" required value="new post">
+        </div>
+        <div class="form-group">
+            <label for="createBody">Body:</label>
+            <textarea class="form-control" id="createBody" rows="3" required>New Post Detail</textarea>
+        </div>
+        <button id="createBtn" type="submit" class="btn btn-primary">Create</button>
+        <button id="clearBtn" type="submit" class="btn btn-primary" style="display: none;">Clear</button>
+    </form>
+
+    <hr>
+
+    <!-- Display Stories -->
+    <div class="mb-4">
+        <h2 class="mb-4 text-center">Posts</h2>
+        <div id="postsList"></div>
+    </div>
+
+</div>
+
+<!-- Include jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="ajax.js"></script>
+
+
+</body>
+</html>
