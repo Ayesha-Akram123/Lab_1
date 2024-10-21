@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="myStyle.css">
+    <style>
+        .bg-cover {
+          background-size: cover;
+          background-position: center;
+        }
+        .nav-link {
+    color: white !important; /* Use !important to override Bootstrap's default styles */
+}
+      </style>
+
+    <title>First Webpage</title>
+</head>
+
+<body>
+    <div class="container-fluid nav-container bg-cover mb-2 " style="background-image: url('images/gull_bg.jpg'); padding:0 0 400px;">
+        <header class="bg-transparent py-3">
+            <div class="d-flex justify-content-between align-items-center nav-qualities">
+                <div class="nav-logo p-3">
+                    <img src="./images/ideas-logo.webp" alt="Logo" class="img-fluid">
+                </div>
+                <div class="qualities-links d-none  d-md-flex gap-3">
+                    <a href="#" class="text-white p-3 text-decoration-none"><span>IDEAS REWARDS</span></a>
+                    <a href="#" class="text-white p-3 text-decoration-none"><span>RETURN & EXCHANGES</span></a>
+                    <a href="#" class="text-white p-3 text-decoration-none"><span>TRACK ORDER</span></a>
+                    <a href="#" class="text-white p-3 text-decoration-none"><span>LOOKBOOK</span></a>
+                </div>
+                <div class="logins d-flex gap-2">
+                    <a href="#" class="text-white p-2"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    <a href="#" class="text-white p-2"><span class="fa fa-user"></span></a>
+                    <a href="#" class="text-white p-2"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+    
+            <nav class="navbar navbar-expand-md navbar-light bg-transparent mt-3">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item text-white">
+                                <a class="nav-link" href="#" class="text-white">END OF SEASON SALE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">LIMITED EDITION</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">LAWN 2024</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">UNSTITCHED</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">IDEAS HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">WOMEN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">SALT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">MEN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">JEWELRY</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">SHOES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">BAGS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">KIDS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">FRAGRANCES</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    
+    <div class="main-container">
+        <main>
+            <section class="western-wear position-relative bg-cover mb-3" style="background-image: url('images/women_western.webp'); padding: 360px 0;">
+                <a href="#" class="uni-link text-white text-decoration-underline fs-2 position-absolute" style="bottom: 238px; left: 285px;" id="link-1">Shop Women's Western</a>
+                <a href="#" class="uni-link text-white text-decoration-underline fs-2 position-absolute " style="bottom: 238px; right: 285px;" id="link-2">Shop Men's Western</a>
+            </section>
+            
+            <section class="women-rtw position-relative bg-cover mb-3" style="background-image: url('images/women_rtw.webp'); padding: 360px 0;">
+                <a href="#" class="uni-link text-white text-decoration-underline fs-2 position-absolute" style="bottom: 238px; left: 285px;" id="link-3">Shop Women's RTW</a>
+            </section>
+            
+            <section class="home position-relative bg-cover mb-3" style="background-image: url('images/everything_home.webp'); padding: 300px 0;">
+                <a href="#" class="uni-link text-white text-decoration-underline fs-2 position-absolute" style="bottom: 208px; right: 329px;" id="link-4">Shop Bath Linen</a>
+                <a href="#" class="uni-link text-white text-decoration-underline fs-2 position-absolute" style="bottom: 208px; right: 125px;" id="link-5">Shop Bedding</a>
+            </section>
+            
+            <section class="collection-container">
+                <div class="container">
+                    <div class="section-heading text-center my-4">
+                        <h2>Explore More</h2>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 d-flex flex-column align-items-center mb-4">
+                            <a href="#" class="text-center">
+                                <img src="./images/kid_wear.webp" class="img-fluid mb-2" alt="Kid's Wear">
+                                <h5 class="h5 text-black">Kid's Wear</h5>
+                                <p class="mb-0 font-weight-bold border-bottom text-black">Shop Now</p>
+                            </a>
+                        </div>
+                        <div class="col-md-4 d-flex flex-column align-items-center mb-4">
+                            <a href="#" class="text-center">
+                                <img src="./images/men_shirt.webp" class="img-fluid mb-2" alt="Men's Shirt">
+                                <h5 class="h5 text-black">Men's Shirt</h5>
+                                <p class="mb-0 font-weight-bold border-bottom text-black">Shop Now</p>
+                            </a>
+                        </div>
+                        <div class="col-md-4 d-flex flex-column align-items-center mb-4">
+                            <a href="#" class="text-center">
+                                <img src="./images/limited_edition.webp" class="img-fluid mb-2" alt="Limited Edition">
+                                <h5 class="h5 text-black">Limited Edition</h5>
+                                <p class="mb-0 font-weight-bold border-bottom text-black">Shop Now</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="new-collection-container py-5">
+                <div class="container">
+                    <div class="text-center mb-4">
+                        <h2>All That's New</h2>
+                        <div class="blog">
+                            <a href="#" class="btn btn-link">VIEW ALL BLOGS</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="position-relative">
+                                <a href="#" class="d-flex justify-content-center">
+                                    <img src="./images/new_image.webp" alt="Image" class="img-fluid">
+                                </a>
+                                <div class="blog-date position-absolute  p-2 bg-white text-uppercase" style="bottom: 4px; right: 0px;">
+                                    <span>September 19, 2024</span>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <h5 class="blog-title">
+                                    <a href="#" class="text-dark">Discover the Best Unstitched Winter Dresses for Women: Winter Collection 2024</a>
+                                </h5>
+                                <div class="blog-desc text-muted">
+                                    Discover the Best Unstitched Winter Dresses for Women: Winter Collection 2024. Winter is the time for the ultimate…
+                                </div>
+                                <p class="blog-text-link">
+                                    <a href="#" class="btn btn-link">Read More</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="position-relative">
+                                <a href="#" class="d-flex justify-content-center">
+                                    <img src="./images/new_image2.webp" alt="Image" class="img-fluid">
+                                </a>
+                                <div class="blog-date position-absolute bottom-0 end-0 p-2 bg-white text-uppercase" style="bottom: 4px; right: 0px;">
+                                    <span>AUGUST 03, 2024</span>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <h5 class="blog-title">
+                                    <a href="#" class="text-dark">Create Your Dream Cozy Bedroom: Shop Gul Ahmed's Top Bedding Collection</a>
+                                </h5>
+                                <div class="blog-desc text-muted">
+                                    Create Your Dream Cozy Bedroom: Shop Gul Ahmed's Top Bedding Collection. Creating a cozy bedroom is all about…
+                                </div>
+                                <p class="blog-text-link">
+                                    <a href="#" class="btn btn-link">Read More</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="position-relative">
+                                <a href="#" class="d-flex justify-content-center">
+                                    <img src="./images/new_image3.webp" alt="Image" class="img-fluid">
+                                </a>
+                                <div class="blog-date position-absolute bottom-0 end-0 p-2 bg-white text-uppercase" style="bottom: 4px; right: 0px;">
+                                    <span>AUGUST 03, 2024</span>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <h5 class="blog-title">
+                                    <a href="#" class="text-dark">Celebrate Freedom with Ideas: 14th August Sale 2024 on the Latest Fashion Essentials</a>
+                                </h5>
+                                <div class="blog-desc text-muted">
+                                    Celebrate Freedom with Ideas: 14th August Sale 2024 on the Latest Fashion Essentials. Unleash the shopper in you at…
+                                </div>
+                                <p class="blog-text-link">
+                                    <a href="#" class="btn btn-link">Read More</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="qualities">
+                    <div class="row policies bg-light justify-content-around mr-0 ml-0 py-3 mb-4">
+                        <div class="col-7 col-md-2 mb-3">
+                            <a href="#" class="text-dark text-decoration-none d-flex align-items-center">
+                                <span class="shipping-img fa fa-shipping-fast fa-2x me-2"></span>
+                                <div>
+                                    <h5 class="m-0">SHIPPING CHARGES</h5>
+                                    <p class="mb-0">Flat Charges: PKR 99 on all orders</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-7 col-md-2 mb-3">
+                            <a href="#" class="text-dark text-decoration-none d-flex align-items-center">
+                                <span class="img24-7 me-2" style="background-image: url(https://www.gulahmedshop.com/media/wysiwyg/icon/24-hours-support-icons_2.png); background-size: contain; width: 50px; height: 40px;"></span>
+                                <div>
+                                    <h5 class="m-0">SUPPORT 24/7</h5>
+                                    <p class="mb-0">Contact us 24 hours a day, 7 days a week</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-7 col-md-2 mb-3">
+                            <a href="#" class="text-dark text-decoration-none d-flex align-items-center">
+                                <span class="track-order-img fa fa-map-marker fa-2x me-2"></span>
+                                <div>
+                                    <h5 class="m-0">TRACK YOUR ORDER</h5>
+                                    <p class="mb-0">Track your order for quick updates</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-7 col-md-2 mb-3">
+                            <a href="#" class="text-dark text-decoration-none d-flex align-items-center">
+                                <span class="return-exchange-img r-e-icon me-2" style="background-image: url('images/return_n_exhange_icon.png'); width: 40px; height: 40px;"></span>
+                                <div>
+                                    <h5 class="m-0">RETURN &amp; EXCHANGES</h5>
+                                    <p class="mb-0">Please view the return and exchange policy</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-7 col-md-2 mb-3">
+                            <a href="#" class="text-dark text-decoration-none d-flex align-items-center">
+                                <span class="int-ship-img fa fa-ship fa-2x me-2"></span>
+                                <div>
+                                    <h5 class="m-0">INTERNATIONAL SHIPPING</h5>
+                                    <p class="mb-0">For international shipping rates, please see Shipping Policy</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+            
+                    <div class="row content ml-3 justify-content-center mr-3">
+                        <div class="col-6 col-md-3 mb-3">
+                            <img src="./images/qualtiy_4.webp" alt="Premium" class="img-fluid">
+                        </div>
+                        <div class="col-6 col-md-3 mb-3">
+                            <img src="./images/quality_3.png" alt="Premium" class="img-fluid">
+                        </div>
+                        <div class="col-6 col-md-3 mb-3">
+                            <img src="./images/quality_2.png" alt="Premium" class="img-fluid">
+                        </div>
+                        <div class="col-6 col-md-3 mb-3">
+                            <img src="./images/quality_1.png" alt="Premium" class="img-fluid">
+                        </div>
+                    </div>
+            </section>
+            
+        </main>
+    </div>
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-2">
+                    <h5 class="mb-3">ABOUT GULAHMED</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">ABOUT US</a></li>
+                        <li><a href="#" class="text-white">COMPANY</a></li>
+                        <li><a href="#" class="text-white">CAREERS</a></li>
+                        <li><a href="#" class="text-white">STORE LOCATOR</a></li>
+                        <li><a href="#" class="text-white">BLOG</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="mb-3">MY ACCOUNT</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white"><span class="fa fa-user"></span> LOGIN IN</a></li>
+                        <li><a href="#" class="text-white"><span class="fa fa-user-plus"></span> CREATE ACCOUNT</a></li>
+                        <li><a href="#" class="text-white"><i class="fa-brands fa-youtube"></i> ACCOUNT INFO</a></li>
+                        <li><a href="#" class="text-white"><span class="fa fa-history"></span> ORDER HISTORY</a></li>
+                        <li><a href="#" class="text-white"><span class="fa fa-check-circle"></span> ORDER STATUS</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="mb-3">CUSTOMER CARE</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">FAQ</a></li>
+                        <li><a href="#" class="text-white">SERVICES</a></li>
+                        <li><a href="#" class="text-white">CONTACT US</a></li>
+                        <li><a href="#" class="text-white">PRIVACY POLICY</a></li>
+                        <li><a href="#" class="text-white">SHOPPING POLICY</a></li>
+                        <li><a href="#" class="text-white">CUSTOMER FEEDBACK</a></li>
+                        <li><a href="#" class="text-white">REQUEST A CALL BACK</a></li>
+                        <li><a href="#" class="text-white">COMPLAINT/INQUIRY FORM</a></li>
+                        <li><a href="#" class="text-white">RETURN AND EXCHANGE POLICY</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="mb-3">FIND US ON</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white"><span class="fa fa-facebook-square"></span> FACEBOOK</a></li>
+                        <li><a href="#" class="text-white"><span class="fa fa-instagram"></span> INSTAGRAM</a></li>
+                        <li><a href="#" class="text-white"><span class="fa fa-twitter"></span> TWITTER</a></li>
+                        <li><a href="#" class="text-white"><span class="fa fa-youtube-play"></span> YOUTUBE</a></li>
+                        <li><a href="#" class="text-white"><span class="fa"><img src="./images/tiktok.webp" alt="" style="width: 20px;"> TIKTOK</a></li>
+                        <li><a href="#" class="text-white"><span class="fa fa-whatsapp"></span> WHATSAPP</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">SIGN UP FOR IDEAS UPDATES</h5>
+                    <p>By entering your email address below, you consent to receiving our newsletter with access to our latest collections, events, and initiatives. More details on this are provided in our <a href="#" class="text-white">Privacy Policy</a>.</p>
+                    <form class="form-inline mb-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Email Address">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-light" type="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-inline">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Whatsapp Number">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-light" type="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="mt-4">
+                        <span class="h3">FOR CORPORATE INQUIRIES</span>
+                        <div>
+                            <strong>BY EMAIL</strong>
+                            <div>
+                                <a href="mailto:corporate@ideas.com.pk" class="text-white">corporate@ideas.com.pk</a> <span class="fa fa-copy"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-4">
+                <div>
+                    <img src="https://www.gulahmedshop.com/media/pwa/images/pay-icons.png" width="259" height="24" alt="supported pay methods">
+                </div>
+                <p class="copyright-parah mb-0" style="font-size: 13px;">@Gul Ahmed Textiles Limited</p>
+            </div>
+        </div>
+    </footer>
+    
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+          
+
+</body>
+
+</html>
