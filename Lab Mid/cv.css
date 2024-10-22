@@ -1,0 +1,90 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.mb-2{
+    margin-bottom:20px;
+}
+.mb-1{
+    margin-bottom:5px;
+}
+a{
+    text-decoration:none;
+    color:#FFF;
+}
+h2{
+    color:rgb(199, 40, 74);
+    font-size:48px;
+}
+.main-section-colored{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 145px;
+    width:35%;
+    height: 700px;
+    background-color:rgb(230, 156, 171);
+}
+.image{
+    width:150px;
+    height:233px;
+    margin-left: 219px;
+    overflow:hidden;
+    background-color:rgb(230, 156, 171);
+}
+.main-section{
+    width:65%;
+    padding: 20px;
+    float: left;
+}
+header{
+    padding:0px 40px 70px;
+    display: flex;
+    flex-direction: row;
+}
+.objective{
+    color:#fff;
+}
+.value-details{
+    color:#FFF;
+}
+.flex-details{
+    display: flex;
+    flex-direction: row;
+    gap: 21px;
+}
+#intro {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 250px;
+    background-color: rgb(199, 40, 74);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+main{
+    flex-direction: row;
+    display: flex;
+    gap: 10px;
+}
+.name{
+    padding: 40px 109px 0;
+}
+.icon{
+    font-size: 33px;
+}
+.spacing{
+    padding: 10px 0 ;
+}
+.spacing h3{
+    color:rgb(199, 40, 74);
+}
+.qualification, .experience, .skills {
+    border-top: 1px solid rgb(199, 40, 74); 
+    padding-top: 15px; 
+}
+ul{
+    padding: 0 19px;
+}
