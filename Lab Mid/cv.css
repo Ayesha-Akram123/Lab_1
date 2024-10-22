@@ -20,7 +20,7 @@ h2{
 .main-section-colored{
     display: flex;
     flex-direction: column;
-    padding: 20px 145px;
+    padding: 20px 62px;
     width:35%;
     height: 700px;
     background-color:rgb(230, 156, 171);
@@ -28,7 +28,6 @@ h2{
 .image{
     width:150px;
     height:233px;
-    margin-left: 219px;
     overflow:hidden;
     background-color:rgb(230, 156, 171);
 }
@@ -38,6 +37,7 @@ h2{
     float: left;
 }
 header{
+    width:100%,
     padding:0px 40px 70px;
     display: flex;
     flex-direction: row;
@@ -87,4 +87,12 @@ main{
 }
 ul{
     padding: 0 19px;
+}
+.main-container{
+    width: 77vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
