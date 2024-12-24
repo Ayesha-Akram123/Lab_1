@@ -1,9 +1,10 @@
-// routes/auth.js
 const express = require("express");
-const router = express.Router();
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
 const User = require("../models/user");
-const ensureAuthenticated = require("../middlewares/ensureAuthenticated");
-const ensureRole = require("../middlewares/ensureRole");
+const router = express.Router();
+
+const JWT_SECRET = "your-secret-key"; // Use environment variables for the secret key
 
 // Register Page
 router.get("/register", (req, res) => {
@@ -16,13 +17,23 @@ router.post("/register", async (req, res) => {
   try {
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      return res.status(400).send("User already exists");
+      req.flash("error_msg", "User already exists");
+      return res.redirect("/register");
     }
-    const user = new User({ username, email, password, role });
+
+    // Hash the password before saving the user
+    const hashedPassword = await bcrypt.hash(password, 10);
+    console.log("Hashed password:", hashedPassword);
+
+    // Create a new user with the hashed password
+    const user = new User({ username, email, password: hashedPassword, role });
     await user.save();
+
+    req.flash("success_msg", "Registration successful. Please log in.");
     res.redirect("/login");
   } catch (error) {
-    res.status(500).send("Error registering user");
+    req.flash("error_msg", "Error registering user");
+    res.redirect("/register");
   }
 });
 
@@ -34,37 +45,53 @@ router.get("/login", (req, res) => {
 // Login User
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
+
   try {
+    // Find the user by email
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(400).send("Invalid credentials");
+      console.log("User not found for email:", email);
+      req.flash("error_msg", "Invalid credentials");
+      return res.redirect("/login");
     }
-    const isMatch = await user.matchPassword(password);
+
+    // Compare entered password with stored hash
+    const isMatch = await bcrypt.compare(password, user.password);
+    console.log("Password match status:", isMatch);
+
     if (!isMatch) {
-      return res.status(400).send("Invalid credentials");
+      req.flash("error_msg", "Invalid credentials");
+      return res.redirect("/login");
     }
-    req.session.user = user;
-    res.redirect("/");
+
+    // Generate the token and log the user in
+    const token = jwt.sign({ id: user._id, role: user.role }, JWT_SECRET, {
+      expiresIn: "1d",
+    });
+    console.log("Generated Token:", token);
+
+    // Store the token in a cookie
+    res.cookie("token", token, { httpOnly: true, secure: false });
+
+    // Store the user in the session as well
+    req.session.user = user; // Store user data in session
+
+    // Successful login
+    req.flash("success_msg", "Logged in successfully");
+    res.redirect("/"); // Redirect to home page
   } catch (error) {
-    res.status(500).send("Error logging in");
+    console.error("Login error:", error);
+    req.flash("error_msg", "Error logging in");
+    res.redirect("/login");
   }
 });
 
+
 // Logout User
 router.get("/logout", (req, res) => {
-  req.session.destroy(() => {
-    res.redirect("/login");
-  });
-});
-
-// Admin Dashboard
-router.get("/admin", ensureAuthenticated, ensureRole("admin"), (req, res) => {
-  res.send("Welcome to the Admin Dashboard");
-});
-
-// Customer Dashboard
-router.get("/customer", ensureAuthenticated, ensureRole("customer"), (req, res) => {
-  res.send("Welcome to the Customer Dashboard");
+  res.clearCookie("token"); // Clear the token cookie
+  req.flash("success_msg", "Logged out successfully");
+  res.redirect("/login");
 });
 
 module.exports = router;

@@ -11,23 +11,22 @@ const adminProductsRouter = require("./routes/admin/products.router");
 const adminCategoriesRouter = require("./routes/admin/categories.router");
 const cartRouter = require('./routes/cart');
 const checkoutRouter = require('./routes/checkout');
+const cookieParser = require("cookie-parser");
 
-
-
-
+// Middleware Setup
+app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 app.use(session({
-  secret: 'secret-key',
+  secret: "your-secret-key",
   resave: false,
   saveUninitialized: true,
-
 }));
 app.use(flash());
 
-// Middleware to pass flash messages to views
+// Pass flash messages to views
 app.use((req, res, next) => {
   res.locals.success_msg = req.flash("success_msg");
   res.locals.error_msg = req.flash("error_msg");
