@@ -1,0 +1,84 @@
+<div class="nav-container">
+    <header>
+        <div class="nav-qualities">
+            <div class="nav-logo">
+                <img src="./images/ideas-logo.webp" alt="">
+            </div>
+            <div class="qualities-links">
+                <% if (user && user.role==='admin' ) { %>
+                    <a href="/admin/dashboard">
+                        <span>ADMIN PORTAL</span>
+                    </a>
+                    <% } %>
+                        <a href="#">
+                            <span>RETURN & EXCHANGES</span>
+                        </a>
+                        <a href="/register">
+                            <span>REGISTER</span>
+                        </a>
+                        <a href="/login">
+                            <span>LOGIN</span>
+                        </a>
+                        <a href="/logout">Logout</a>
+                        <a class="nav-link" href="/cart">
+                            Cart <span class="badge bg-secondary">
+                                <%= cartItemCount %>
+                            </span>
+                        </a>
+            </div>
+            <div class="logins">
+                <a href="#">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <span class="fa fa-user"></span>
+                </a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <ul class="navlinks">
+                <li class="link-item">
+                    <a href="#">END OF SEASON SALE</a>
+                </li>
+                <li class="link-item">
+                    <a href="#">LIMITED EDITION</a>
+                </li>
+                <li class="link-item">
+                    <a href="#">LAWN 2024</a>
+                </li>
+                <li class="link-item">
+                    <a href="#">UNSTITCHED</a>
+                </li>
+                <li class="link-item">
+                    <a href="#">IDEAS HOME</a>
+                </li>
+                <li class="link-item">
+                    <a href="#">WOMEN</a>
+                </li>
+                <li class="link-item">
+                    <a href="#">SALT</a>
+                </li>
+                <li class="link-item">
+                    <a href="#">MEN</a>
+                </li>
+                <li class="link-item">
+                    <a href="#">JEWELRY</a>
+                </li>
+                <li class="link-item">
+                    <a href="#">SHOES</a>
+                </li>
+                <li class="link-item">
+                    <a href="#">BAGS</a>
+                </li>
+                <li class="link-item">
+                    <a href="#">KIDS</a>
+                </li>
+                <li class="link-item">
+                    <a href="#">FRAGRANCES</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</div>
