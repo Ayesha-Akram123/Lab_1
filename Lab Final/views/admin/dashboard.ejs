@@ -1,0 +1,49 @@
+<!--views/admin/dashboard-->
+<div class="container my-5">
+    <h2>Admin Dashboard</h2>
+    <h3>Recent Orders</h3>
+
+    <% if (typeof error !=='undefined' ) { %>
+        <div class="alert alert-danger" role="alert">
+            <%= error %>
+        </div>
+        <% } %>
+
+            <% if (orders && orders.length> 0) { %>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% orders.forEach(order=> { %>
+                            <tr>
+                                <td>
+                                    <%= order._id %>
+                                </td>
+                                <td>
+                                    <%= order.name %>
+                                </td>
+                                <td>$<%= order.total ? order.total.toFixed(2) : "0.00" %>
+                                </td>
+
+                                </td>
+                                <td>
+                                    <%= order.status %>
+                                </td>
+                                <td>
+                                    <%= order.createdAt.toLocaleDateString() %>
+                                </td>
+                            </tr>
+                            <% }); %>
+                    </tbody>
+                </table>
+                <% } else { %>
+                    <p>No orders found.</p>
+                    <% } %>
+</div>

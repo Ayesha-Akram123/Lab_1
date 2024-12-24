@@ -1,0 +1,32 @@
+<div class="container my-5">
+    <h3 class="text-primary">My Wishlist</h3>
+    <% if (wishlist.length> 0) { %>
+        <div class="row">
+            <% wishlist.forEach(product=> { %>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="/<%= product.image || '/uploads/default-image.jpg' %>" class="card-img-top"
+                            alt="<%= product.title %>" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">
+                                <%= product.title %>
+                            </h5>
+                            <p class="card-text text-muted">
+                                <%= product.description.substring(0, 100) %>
+                                    <%= product.description.length> 100 ? "..." : "" %>
+                            </p>
+                            <h6 class="text-success">Price: $<%= product.price %>
+                            </h6>
+                            <form action="/cart/add" method="POST" class="mt-2">
+                                <input type="hidden" name="productId" value="<%= product._id %>">
+                                <button type="submit" class="btn btn-primary btn-sm w-100">Add to Cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+        <% } else { %>
+            <p class="text-muted">Your wishlist is empty.</p>
+            <% } %>
+</div>
