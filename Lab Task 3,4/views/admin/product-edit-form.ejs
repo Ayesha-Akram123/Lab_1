@@ -1,0 +1,84 @@
+<!--views/admin/product-edit-form.ejs-->
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <form 
+      action="/admin/products/edit/<%= product._id %>" 
+      method="post" 
+      enctype="multipart/form-data" 
+      class="p-4 shadow rounded bg-white" 
+      style="width: 100%; max-width: 600px;"
+    >
+      <h3 class="text-center text-bold mb-4">Edit Product</h3>
+  
+      <!-- Title -->
+      <div class="form-group mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input 
+          name="title" 
+          type="text" 
+          class="form-control" 
+          id="title" 
+          value="<%= product.title %>" 
+          required
+        />
+      </div>
+  
+      <!-- Description -->
+      <div class="form-group mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea 
+          name="description" 
+          class="form-control" 
+          id="description" 
+          rows="3" 
+          required
+        ><%= product.description %></textarea>
+      </div>
+  
+      <!-- Price -->
+      <div class="form-group mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input 
+          name="price" 
+          type="number" 
+          class="form-control" 
+          id="price" 
+          value="<%= product.price %>" 
+          min="0" 
+          step="0.01" 
+          required
+        />
+      </div>
+  
+      <!-- Is Featured -->
+      <div class="form-group form-check mb-4">
+        <input 
+          name="isFeatured" 
+          type="checkbox" 
+          class="form-check-input" 
+          id="isFeatured" 
+          <% if (product.isFeatured) { %> checked <% } %> 
+        />
+        <label class="form-check-label" for="isFeatured">Featured?</label>
+      </div>
+  
+      <!-- Product Image -->
+      <div class="form-group mb-3">
+        <label for="image" class="form-label">Upload Image</label>
+        <input 
+          name="image" 
+          type="file" 
+          class="form-control" 
+          id="image" 
+          accept="image/*"
+        />
+      </div>
+  
+      <!-- Submit Button -->
+      <div class="d-grid">
+        <button class="btn btn-primary">
+          Edit Record
+        </button>
+      </div>
+    </form>
+  </div>
+  
